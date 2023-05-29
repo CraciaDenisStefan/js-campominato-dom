@@ -22,3 +22,14 @@ Problema : Creare una select per far scegliere al utente la difficolta
 	3.1 - Se sceglie difficolta 100 uscira la griglia da 100
 	3.2 - Se sceglie difficolta 81 uscira la griglia da 81
 	3.3 - Se sceglie difficolta 49 uscira la griglia da 49
+
+
+Problema : Creare 16 bombe casuali 
+
+1 - Creare un array vuoto 
+2 - Creare una funzione con la quale generiamo 16 numeri casuali da inserire nella nostra array vuota 
+	2.1 - Il numero random dovra partire da uno fino al livello selezionato dal utente 
+3 - Assicurarsi che il numero non si ripeta nel array 
+4 - Se cliccando su un numero , questo numero e uguale ad un numero del array delle bombe , dovra diventare rosso e finire la partita
+	4.1 - Se si clicca su una bomba facciamo uscire i  punti e dichiariamo partita finita .
+	4.2 - Se invece si evitano le bombe le caselle continuano a colorarsi di blu fino alla fine e facciamo uscire l'avviso hai vinto .
