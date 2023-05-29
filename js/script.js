@@ -15,16 +15,10 @@ function createSquareElement(livello) {
 
     return square;
   }
-
-
-
+//Funzione per generare numero random 
 function randomNumberBombe(min, max){
     return Math.floor(Math.random()*(max - min +1)+min)
 }
-
-
-
-
 
 //Mettiamo l'inizio del pulsante 
 start.addEventListener(`click`, function(){
@@ -46,15 +40,14 @@ start.addEventListener(`click`, function(){
                 bombe.push(bombNumber);
               }
             }
-            
-             
-
 
 //Prendiamo il container del main e li creiamo una classe in modo che si apra insieme al pulsante
     let container = document.querySelector(`.container_main`)
     container.classList.add(`container`)
 //Svuotiamo il container ad ogni click per inserire i nuovi dati della nuova difficoltà
     container.innerHTML = '';
+    let winnerClick = 0 
+    document.querySelector(`.verdetto`).innerText= ``
 //Creiamo il ciclo che si comportera di conseguenza alle scelte precedenti 
     for (let i=0; i<level; i++){
         let square = createSquareElement(document.getElementById('level').value);
@@ -64,10 +57,16 @@ start.addEventListener(`click`, function(){
         container.append(square)
 //Facciamo uscire nella console il quadrato con il numero cliccato dal utente e cambiamo il background del quadrato (senza poi ritornare al colore iniziale ricliccando) 
     square.addEventListener(`click`, function(){
+ 
         if(!bombe.includes(square.innerText = i + 1)){
         this.classList.add(`clicked`)
-        }else{
+        winnerClick++;
+        if(winnerClick === level - 16){
+            document.querySelector(`.verdetto`).innerText= `Bravo hai compiuto l'impossibile`
+        }
+        }else{     
             this.classList.add(`bomb`)
+            document.querySelector(`.verdetto`).innerText= `Hai perso . I tuoi punti sono : ${winnerClick}`
         }
         console.log(this.innerText)
 

@@ -33,3 +33,4 @@ Problema : Creare 16 bombe casuali
 4 - Se cliccando su un numero , questo numero e uguale ad un numero del array delle bombe , dovra diventare rosso e finire la partita
 	4.1 - Se si clicca su una bomba facciamo uscire i  punti e dichiariamo partita finita .
 	4.2 - Se invece si evitano le bombe le caselle continuano a colorarsi di blu fino alla fine e facciamo uscire l'avviso hai vinto .
+5 - Una volta cliccato sulla bomba , non si puo piu cliccare su altri quadrati
