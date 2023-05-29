@@ -65,6 +65,9 @@ main{
  .clicked{
     background-color: rgb(45, 75, 247);
  }
+ .bomb{
+   background-color: red;
+ }
 
  .start_100 {
     background-color: gray;
