@@ -59,8 +59,9 @@ start.addEventListener(`click`, function(){
 //Facciamo uscire nella console il quadrato con il numero cliccato dal utente e cambiamo il background del quadrato (senza poi ritornare al colore iniziale ricliccando) 
     square.addEventListener(`click`, function(){
 
-       if(gameOver === false) 
+        if(gameOver === false && !square.clicked) 
         if(!bombe.includes(square.innerText = i + 1)){
+          square.clicked = true;
         this.classList.add(`clicked`)
         winnerClick++;
         if(winnerClick === level - 16){

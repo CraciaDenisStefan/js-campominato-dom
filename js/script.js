@@ -57,8 +57,9 @@ start.addEventListener(`click`, function(){
         container.append(square)
 //Facciamo uscire nella console il quadrato con il numero cliccato dal utente e cambiamo il background del quadrato (senza poi ritornare al colore iniziale ricliccando) 
     square.addEventListener(`click`, function(){
- 
+        if(!square.clicked){
         if(!bombe.includes(square.innerText = i + 1)){
+        square.clicked = true;
         this.classList.add(`clicked`)
         winnerClick++;
         if(winnerClick === level - 16){
@@ -69,8 +70,8 @@ start.addEventListener(`click`, function(){
             document.querySelector(`.verdetto`).innerText= `Hai perso . I tuoi punti sono : ${winnerClick}`
         }
         console.log(this.innerText)
-
-    })
     }
+    })
+}
 
 })
